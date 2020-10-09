@@ -1,0 +1,39 @@
+! X Font Rendering:
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+
+! Terminal colour scheme
+#include "conf/colors/material.urxvt"
+
+! ---- URxvt-specific settings ----- !
+
+URxvt*termName: rxvt-unicode-256color
+
+! Perl extensions:
+!URxvt.perl-ext-common: default,matcher
+
+! Tab bar colours:
+!URxvt.tabbed.tabbar-fg: 2
+!URxvt.tabbed.tabbar-bg: 0
+!URxvt.tabbed.tab-fg: 3
+!URxvt.tabbed.tab-bg: 0
+
+! Window and icon stuff:
+URxvt.geometry: 130x40
+URxvt.iconFile: /usr/share/icons/Papirus/symbolic/apps/utilities-terminal-symbolic.svg
+
+! Font stuff:
+URxvt.font: xft:Source\ Code\ Pro:size=11:antialias=true:hinting=true,xft:Noto Sans Devanagari UI:size=11:antalias=true:hinting=true
+! URxvt.letterSpace: -1
+
+! Clickable URLs:
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+
+! Scrollbar style:
+URxvt.scrollstyle: plain
+URxvt.scrollBar_right: true
+

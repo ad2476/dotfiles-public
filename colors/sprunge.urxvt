@@ -1,0 +1,36 @@
+! Sprunge scheme
+*background: #262729
+*foreground: #f8f8f2
+
+! Black and "bright" black
+*color0: #878e84
+*color8: #2f2f2f
+
+! Red and "bright" red
+*color1: #f92671
+*color9: #ff669d
+
+! Green and "bright" green
+*color2: #a6e22e
+*color10: #beed5f
+
+! Yellow and "bright" yellow
+*color3: #fd971f
+*color11: #e6db74
+
+! Blue and "bright" blue
+*color4: #1692d0
+*color12: #66d9ef
+
+! Magenta and "bright" magenta
+*color5: #9e6ffe
+*color13: #df92f6
+
+! Cyan and "bright" cyan
+*color6: #5e7175
+*color14: #a3babf
+
+! White and "bright" white
+*color7: #ffffff
+*color15: #ffffff
+

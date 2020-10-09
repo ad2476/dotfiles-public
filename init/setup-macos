@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+source $DIR/common.sh
+
+if ! command_exists brew; then
+  echo "Installing homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+brew install git neovim zsh tmux fzf the_silver_searcher node ripgrep
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+

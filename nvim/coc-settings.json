@@ -1,0 +1,10 @@
+{
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": ["-i", "-p"],
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--select=F402,F403,F404,F405,F811,F812,F821,F822,F823,F831,F841"],
+  "coc.preferences.formatOnSaveFiletypes": ["python"]
+}

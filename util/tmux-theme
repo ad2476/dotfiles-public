@@ -1,0 +1,22 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+CONF_DIR="${DIR}"/..
+
+THEME_NAME="${1}"
+GREP=$(type -p grep)
+
+THEME_FILE="${CONF_DIR}/colors/$THEME_NAME.tmux"
+if [ ! -f $THEME_FILE ]; then
+  THEME_FILES=$(ls "${CONF_DIR}/colors" | $GREP '.tmux')
+  echo -n "Available themes: "
+  for filename in $(ls "$CONF_DIR/colors" | $GREP '.tmux'); do
+    theme=${filename%.tmux}
+    echo -n "$theme "
+  done
+  echo
+  exit 1
+fi
+
+ln -sfn $THEME_FILE $HOME/.tmux.theme
+
