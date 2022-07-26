@@ -56,7 +56,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 command -v nvim >/dev/null && \
   echo "[setup] Installing neovim plugins" && \
-  nvim -es -u init.vim -i NONE +PlugInstall +qa
+  nvim -es -u nvim/init.vim -i NONE +PlugInstall +qa
 
 echo "[setup] Compiling terminfo file"
 
