@@ -48,6 +48,7 @@ ln -sfn "${DIR}/nvim" $HOME/.config/nvim
 ln -sfn $DIR/starship.toml $HOME/.config/starship.toml
 
 SHELDON_DIR="$HOME/.sheldon"
+mkdir -p $SHELDON_DIR
 ln -sfn "${DIR}/sheldon/plugins.toml" $SHELDON_DIR
 
 echo "[setup] Installing vim-plug to ~/.local/share/nvim/site/autoload/plug.vim"
