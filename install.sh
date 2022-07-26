@@ -54,6 +54,10 @@ echo "[setup] Installing vim-plug to ~/.local/share/nvim/site/autoload/plug.vim"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+command -v nvim >/dev/null && \
+  echo "[setup] Installing neovim plugins" && \
+  nvim -es -u init.vim -i NONE +PlugInstall +qa
+
 echo "[setup] Compiling terminfo file"
 
 tic -x $DIR/tmux-256color.terminfo
