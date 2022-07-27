@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Installs necessary dependencies and sets up the filesystem for dotfiles in
+# this repo to work.
+# Run this script with INSTALL_POWERLINE_FONTS=1 to additionally install
+# powerline fonts on the system.
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 DEVICE=$(hostname -s)
@@ -17,7 +22,7 @@ case $(uname) in
     ;;
 esac
 
-if [ ! -d "${DIR}/fonts" ]; then
+if [ ! -d "${DIR}/fonts" ] && [ -n "$INSTALL_POWERLINE_FONTS" ]; then
   echo "[setup] Installing powerline fonts"
   git clone https://github.com/powerline/fonts
   cd fonts
