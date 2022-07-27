@@ -6,7 +6,6 @@ Plug 'tpope/vim-sensible' " sensible vim defaults
 
 " IDE-like functionality
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'w0rp/ale' " syntax checking
 Plug 'tpope/vim-fugitive' " git support for vim
 Plug 'airblade/vim-gitgutter' " shows +/-/~ according to git
 Plug 'majutsushi/tagbar'
@@ -25,13 +24,11 @@ Plug 'JuliaEditorSupport/julia-vim' " julia support
 Plug 'tikhomirov/vim-glsl' " syntax highlighting for GLSL
 Plug 'fatih/vim-go' " plugin for golang
 Plug 'rust-lang/rust.vim' " plugin for rust
-"Plug 'python-mode/python-mode' " plugin for python
 Plug 'sheerun/vim-polyglot' " collection of language packs for vim
 Plug 'kalekundert/vim-coiled-snake' " code-folding for python
 Plug 'Konfekt/FastFold'
 
 " Visual/themeing
-Plug 'edkolev/tmuxline.vim' " uses vim-airline theme to make tmux match
 Plug 'vim-airline/vim-airline' " status line
 Plug 'vim-airline/vim-airline-themes' " themes to make status line pretty
 Plug 'Yggdroot/indentLine' " makes indentations more visible with lines
@@ -44,15 +41,24 @@ call plug#end() " Automatically executes filetype plugin indent on and syntax en
 " --- Colors
 
 " Change colour of autocomplete drop-down
-"highlight Pmenu ctermbg=238 gui=bold
+highlight Pmenu ctermfg=248 ctermbg=0 gui=bold guibg=DarkGrey
+highlight PmenuSel ctermfg=16 ctermbg=255 gui=bold guibg=Grey
+
+" Enable 256 colours
+set t_Co=256
+set t_ZH="\e[3m"
+set t_ZR="\e[23m"
 
 "colorscheme gruvbox
 "colorscheme desert
 "colorscheme mango
-colorscheme onehalfdark
+"colorscheme onehalfdark
 set background=dark
 
-set termguicolors
+"set termguicolors
+
+" Change colour of SignColumn
+highlight! link SignColumn LineNr
 
 " --- Settings
 exec 'source '.stdpath('config').'/settings.vim'
@@ -70,7 +76,7 @@ au BufRead,BufNewFile *.pyx set filetype=cython
 " Noexpandtab on makefiles
 autocmd FileType make setlocal noexpandtab
 
-" IB uses 2-space indent
+" Use 2-space indent in python
 autocmd FileType python setlocal expandtab softtabstop=2 shiftwidth=2
 
 " Run checktime every time the cursor is moved and settles for 4s

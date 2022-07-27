@@ -5,11 +5,16 @@ Inspiration from [ntsvetko](https://github.com/ntsvetko/dotfiles)
 
 ## External Dependencies
 
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [neovim](https://github.com/neovim/neovim)
 * [Patched powerline fonts](https://github.com/powerline/fonts)
-* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (Installed by script)
 * [fzf](https://github.com/junegunn/fzf)
-* [ag](https://github.com/ggreer/the_silver_searcher)
+* [fd](https://github.com/sharkdp/fd)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [sheldon](https://github.com/rossmacarthur/sheldon)
+* [bat](https://github.com/sharkdp/bat)
+* [starship](https://starship.rs)
+* [univeral-ctags](https://github.com/universal-ctags/ctags)
 
 Along with the usual: `zsh`, `git`, `curl`/`wget`, etc.
 

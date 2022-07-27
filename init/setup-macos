@@ -8,8 +8,10 @@ if ! command_exists brew; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-brew install git neovim zsh tmux fzf the_silver_searcher node ripgrep
+brew install bat git neovim zsh tmux fd fzf node ripgrep sheldon starship
 
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
 
+# Homebrew tap for universal-ctags
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
